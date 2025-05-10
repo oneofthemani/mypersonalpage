@@ -14,18 +14,20 @@ export default function NavLinks() {
   
     return (
       <>
+      <div>
         {links.map((link) => {
           {/*clsx is powerful */}
           return (
             <Link
               key={link.name}
               href={link.href}
-              className='bg-sky-100 text-blue-600'  
+              className='bg-sky-100 text-blue-600 items-center'  
             >
             <p className="hidden md:block">{link.name}</p>
             </Link>
           );
         })}
+        </div>
       </>
     );
   }
