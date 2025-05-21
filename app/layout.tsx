@@ -23,14 +23,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <NavLinks />
-        {children}
-      </body>
+    <html>
+      <body>
+        <div className="p-6 md:overflow-y-auto md:p-12">{children}</div>
+    </body>
     </html>
   );
 }
