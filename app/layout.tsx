@@ -28,7 +28,10 @@ export default function RootLayout({
   return (
     <html>
       <body>
-        <div className="p-6 md:overflow-y-auto md:p-12">{children}</div>
+        <div className="grid grid-cols-5 h-screen">
+          <div className="h-full p-6 md:overflow-y-auto md:p-12 bg-gradient-to-r from-sky-900 to-sky-200"><NavLinks /></div>
+          <div className="col-span-4 p-6 md:overflow-y-auto md:p-12 bg-gradient-to-r from-sky-200 to-sky-900">{children}</div>
+        </div>
     </body>
     </html>
   );
